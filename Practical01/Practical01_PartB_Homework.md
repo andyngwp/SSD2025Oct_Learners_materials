@@ -49,7 +49,7 @@
 - Figure out how to return student hobbies as a **JSON list** for the `/hobbies` route:
 
   ```json
-  ["coding", "reading", "cycling"],
+  ["coding", "reading", "cycling"]
   ```
 
 - Additionally, figure out how to return student as an individual **JSON object** for a new `/student` route:
