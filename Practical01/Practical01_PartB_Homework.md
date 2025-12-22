@@ -37,21 +37,30 @@
 
 ### 🔥 Bonus (Optional)
 
-- Figure out how to return a **JSON list** for the `/hobbies` route:
+- Declare a student object:
+
+  ```js
+  student = {
+  "name": "Alex",
+  "hobbies": ["coding", "reading", "cycling"],
+  "intro": "Hi, I'm Alex, a Year 2 student passionate about building APIs!"
+  }
+  ```
+- Figure out how to return student hobbies as a **JSON list** for the `/hobbies` route:
 
   ```json
   ["coding", "reading", "cycling"],
   ```
 
-- Additionally, figure out how to return an individual **JSON object** for a new `/student` route:
+- Additionally, figure out how to return student as an individual **JSON object** for a new `/student` route:
 
-```json
-{
-  "name": "Alex",
-  "hobbies": ["coding", "reading", "cycling"],
-  "intro": "Hi, I'm Alex, a Year 2 student passionate about building APIs!"
-}
-```
+  ```json
+  {
+    "name": "Alex",
+    "hobbies": ["coding", "reading", "cycling"],
+    "intro": "Hi, I'm Alex, a Year 2 student passionate about building APIs!"
+  }
+  ```
 
 ---
 

@@ -70,7 +70,7 @@ If you'd like, you can open and inspect the `package.json` file in your project 
    });
 
    app.listen(PORT, () => {
-     console.log(`Server is running on http://localhost:${PORT}`);
+   console.log(`Server is running on http://localhost:${PORT}`);
    });
    ```
 
@@ -106,17 +106,12 @@ Example code:
 ```js
 // Define route for About Page
 app.get("/about", (req, res) => {
-  res.send("About Page");
+ res.send("About Page");
 });
 
 // Define route for Contact Page
 app.get("/contact", (req, res) => {
-  res.send("Contact Page");
-});
-
-// Listen on the port after defining routes
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+ res.send("Contact Page");
 });
 ```
 
