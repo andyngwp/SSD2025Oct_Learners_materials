@@ -335,7 +335,7 @@ Write the JavaScript code to handle the form submission and send a POST request 
           .get("content-type")
           ?.includes("application/json")
           ? await response.json()
-          : { message: response.statusText };
+          : { message: response.statusText, error: response.error };
 
         if (response.status === 201) {
           messageDiv.textContent = `Book created successfully! ID: ${responseBody.id}`;
@@ -344,7 +344,7 @@ Write the JavaScript code to handle the form submission and send a POST request 
           console.log("Created Book:", responseBody);
         } else if (response.status === 400) {
           // Handle validation errors from the API (from Practical 04 validation middleware)
-          messageDiv.textContent = `Validation Error: ${responseBody.message}`;
+          messageDiv.textContent = `Validation Error: ${responseBody.error}`;
           messageDiv.style.color = "red";
           console.error("Validation Error:", responseBody);
         } else {
@@ -516,7 +516,7 @@ Write the JavaScript to get the book ID from the URL, fetch the existing book da
             .get("content-type")
             ?.includes("application/json")
             ? await response.json()
-            : { message: response.statusText };
+            : { message: response.statusText, error: response.error };
           // Throw an error with status and message
           throw new Error(
             `HTTP error! status: ${response.status}, message: ${errorBody.message}`
