@@ -327,7 +327,7 @@ This task expands the user management functionalities to include searching for u
       }
 
       try {
-        const users = await userModel.searchUsers(searchTerm);
+        const users = await User.searchUsers(searchTerm);
         res.json(users);
       } catch (error) {
         console.error("Controller error in searchUsers:", error);
